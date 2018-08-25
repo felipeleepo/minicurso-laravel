@@ -11,6 +11,7 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+$router->get('usuarios', 'UserController@getAll');
+$router->get('usuarios/{id}', 'UserController@getUser');
+$router->get('pedidos', 'UserController@orders');
+$router->post('usuarios', 'UserController@setUser');
